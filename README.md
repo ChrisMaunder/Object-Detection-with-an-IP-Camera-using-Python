@@ -50,7 +50,7 @@ Here, I chose 'user' and 'pass' as my ultra-secure credentials. The cam is on IP
 
 We use `imutils.video` to grab the stream and `OpenCV` to display each frame. It's embarrassingly simple code:
 
-```cpp
+```python
 import cv2
 import imutils
 from imutils.video import VideoStream
@@ -95,7 +95,7 @@ Viewing is one thing, but let's make it do something useful: Add Object Detectio
 
 First, add a ``do_detection`` method in the code. This method will take a frame, convert it to a form suitable for sending to CodeProject.AI Server, do the detection, then annotate the frame with labels and bounding boxes for the items detected.
 
-```cpp
+```python
 import io
 import requests
 import numpy as np
@@ -145,7 +145,7 @@ Next, we'll take each image we retrieve from the RTSP stream, convert it to a fo
 
 Our `main` becomes:
 
-```cpp
+```python
 def main():
 
    # Open the RTSP stream
